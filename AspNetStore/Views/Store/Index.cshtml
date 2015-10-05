@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AspNetStore.Models.Category> 
+
+@{  
+    ViewBag.Title = "index";
+} 
+ 
+<h3>Browse Categories</h3> 
+
+<ul class="list-group"> 
+
+    @foreach (var category in Model)
+    {
+    <li class="list-group-item">@Html.ActionLink(category.Name, "Browse", new {id = category.Name }) </li>
+    }
+
+
+</ul>
